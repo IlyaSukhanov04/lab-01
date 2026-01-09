@@ -25,7 +25,13 @@ public class MainActivity extends AppCompatActivity {
 
         Cat cat = new Cat("Lucy");
         Dog dog = new Dog("Snoopy");
+
         Scorpion scorpion = new Scorpion("Scorponok");
+        scorpion.setMood(new sad());
+        String status = scorpion.checkMood();
+        String time = scorpion.getMood().dateNow().toString();
+
+        System.out.println(status + time);
 
         ArrayList<Pet> petList = new ArrayList<>();
         petList.add(cat);
@@ -33,11 +39,9 @@ public class MainActivity extends AppCompatActivity {
         petList.add(scorpion);
 
         ArrayList<Pettable> pettablePets = new ArrayList<Pettable>();
-        pettablePets.add((Pettable) cat);
+        pettablePets.add(cat);
         pettablePets.add(dog);
 
-        String status = cat.getMood().getDescription();
-        String time = cat.getMood().getDate().toString();
 
 
     }

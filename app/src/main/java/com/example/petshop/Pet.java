@@ -39,11 +39,17 @@ public abstract class Pet {
 
     public abstract String speak();
 
-    public Mood Mood() {
-        return mood;
-    }
 
     public void setMood(Mood mood) {
         this.mood = mood;
     }
+
+    public Mood getMood() {
+        return mood;
+    }
+
+    public String checkMood() {
+        return mood.getMood();
+    }
+
 }
